@@ -27,6 +27,8 @@ body
 						li 
 							a(href="#" title="О компании") О компании
 						li 
+							a(href="#" title="Прайс-лист") Услуги
+						li 
 							a(href="#" title="Прайс-лист") Прайс-лист
 						li 
 							a(href="#" title="Отзывы") Отзывы
@@ -34,7 +36,20 @@ body
 							a(href="#" title="Контакты") Контакты
 
 	section
-		.container
+		.container-fluid
 			.row
-				.col-12.px-0
-					img.w-100(src="images/bg.jpg")
+				.col-12.px-0.first-screen
+					img.w-100(src="images/bg.jpg" alt="" title="")
+					.container
+						.row
+							.col-6.px-0
+								h1 Прием черного и&nbsp;цветного металлолома в&nbsp;Одинцово и&nbsp;Одинцовском&nbsp;районе
+								button(type="button") Отправить заявку на вывоз
+							.offset-2.col-4.px-0
+								.feedback
+									h2.text-center Обратный звонок
+									form(action="#").d-flex.flex-column.justify-content-center
+										.form-group
+											input.form-control(type="text" placeholder="Имя" required)
+											input.form-control(type="phone" placeholder="Телефон" required)
+										button(type="submit") Отправить

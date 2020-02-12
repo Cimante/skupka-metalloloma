@@ -1,5 +1,12 @@
 @import "./node_modules/bootstrap/scss/bootstrap.scss"
-@import "fonts"
+@import "ui"
+
+*
+	font-family: "Golos Web Regular", sans-serif
+
+::selection
+	color: #ffffff
+	background-color: #2A56C7
 
 h1 
 	font-family: "Golos Web Bold", sans-serif
@@ -65,3 +72,68 @@ a
 			margin-right: 14px
 			&:hover
 				color: $primary-color
+
+.first-screen 
+	img 
+		position: absolute
+		max-height: 600px
+		filter: brightness(.25)
+		z-index: 0
+	h1 
+		position: relative
+		margin-top: 130px
+		font-family: "Golos Web DemiBold", sans-serif
+		font-size: 40px
+		line-height: 48px
+		color: #fff
+		z-index: 10
+	button
+		width: 255px
+		margin-top: 20px
+		height: 40px
+		border: 0
+		border-radius: 3px
+		font-family: "Golos Web Regular", sans-serif
+		font-size: 16px
+		color: white
+		background-color: $primary-color
+		box-shadow: $first-screen-shadow
+		transition: .2s ease
+		&:hover
+			background-color: $primary-color-light
+			box-shadow: $first-screen-shadow-light
+			transition: .2s ease
+		&:active 
+			background-color: $primary-color-dark
+			box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.15)
+			transition: .2s ease
+
+.feedback
+	margin-top: 98px
+	background-color: #272727
+	border-radius: 3px
+	padding: 30px
+	h2 
+		font-family: "Golos Web DemiBold"
+		margin-bottom: 44px
+		color: #fff
+	form 
+		input 
+			margin-bottom: 16px
+			&:focus
+				border-color: $primary-color
+				box-shadow: $first-screen-shadow-light
+		button 
+			margin: 0 auto
+			max-width: 160px
+			font-family: "Golos Web Medium", sans-serif
+			font-size: 16px
+			background-color: #fff
+			color: $text-color
+			box-shadow: unset
+			&:hover 
+				box-shadow: unset
+				background-color: $primary-color
+				color: #fff
+			&:active
+				box-shadow: unset
