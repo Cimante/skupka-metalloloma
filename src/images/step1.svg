@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 31V13H34V31C34 33.209 32.209 35 30 35" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 31H13C13 33.209 14.791 35 17 35H30C27.791 35 26 33.209 26 31Z" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 22H30" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M20 22H22" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M24 26H30" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M20 26H22" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M24 18H30" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M20 18H22" stroke="#FB6C4D" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M26 31H13C13 33.209 14.791 35 17 35H30C27.791 35 26 33.209 26 31Z" fill="#FB6C4D"/>
+<circle cx="24" cy="24" r="23" stroke="#FB6C4D" stroke-width="2"/>
+</svg>

@@ -12,6 +12,14 @@ h1
 	font-family: "Golos Web Bold", sans-serif
 	font-size: 24px
 
+h2 
+	margin-bottom: 40px
+	font-family: "Golos Web DemiBold", sans-serif
+	font-weight: 600
+	font-size: 40px
+	line-height: 48px
+	color: $heading-color
+
 p, span, a
 	font-family: "Golos Web Regular", sans-serif
 
@@ -115,6 +123,7 @@ a
 	padding: 30px
 	h2 
 		font-family: "Golos Web DemiBold"
+		font-size: 27px
 		margin-bottom: 44px
 		color: #fff
 	form 
@@ -137,3 +146,96 @@ a
 				color: #fff
 			&:active
 				box-shadow: unset
+
+.about-us
+	margin-top: 150px
+	h2 
+		margin-bottom: 24px
+	p 
+		font-size: 16px
+		line-height: 24px
+		color: $text-color
+
+.advantages 
+	margin-top: 80px
+	img 
+		width: 70px
+		height: 70px
+		margin-bottom: 12px
+
+.whys 
+	margin-top: 120px
+	h2 
+		margin-bottom: 24px
+	ul 
+		li:not(:last-child())
+			margin-bottom: 20px
+
+.license 
+	margin-top: 120px
+
+.partners 
+	margin-top: 120px
+
+.process 
+	margin-top: 120px
+	ul 
+		margin-top: 50px
+		li 
+			display: inline
+			&:not(:first-child()):before
+				content: url("../images/arrows.svg")
+				display: inline-block
+				margin-top: 44px
+				margin-left: 42px
+				margin-right: 42px
+				float: left
+			img 
+				margin-bottom: 10px
+			p 
+				padding: 0
+				max-width: 8vw
+				font-size: 14px
+				line-height: 17px !important
+
+.faq 
+	margin-top: 120px
+	ul 
+		padding: 0
+		list-style: none
+		li 
+			margin-bottom: 8px
+			label
+				margin-left: 8px
+				display: inline-block
+				padding: 4px 14px
+				border-radius: 16px
+				transition: .15s ease-in
+				&:hover 
+					background-color: $light-gray
+					transition: .15s ease-in
+					cursor: pointer
+			input[type="radio"]
+				display: none
+			
+			input[type="radio"]:checked + label 
+				background-color: $primary-color
+				color: #fff
+
+			svg 
+				margin-top: -1px
+
+.faq--answer
+	padding: 30px
+	box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25)
+	border-radius: 7px
+	h3 
+		margin-bottom: 24px
+		font-family: "Golos Web Medium", sans-serif
+		font-weight: 500
+		font-size: 24px
+		line-height: 29px !important
+		color: $text-color
+	p 
+		padding: 0
+		color: $text-color
