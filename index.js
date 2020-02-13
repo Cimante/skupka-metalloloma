@@ -12,3 +12,11 @@ app.set('view engine', 'pug');
 app.get('/', (req, res) => {
 	res.render('index.pug')
 })
+
+app.get('/about', (req, res) => {
+	res.render('about.pug')
+})
+
+app.get('/contacts', (req, res) => {
+	res.render('contacts.pug')
+})

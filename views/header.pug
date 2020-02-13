@@ -8,4 +8,25 @@ html(lang="ru-RU")
 		link(rel="stylesheet", href="css/styles.min.purged.css")
 
 		title Скупка металлолома
-		
+	body
+		header
+			.container
+				.row
+					.col-12.d-flex.align-items-center.mt-4.px-0.header
+						a(href="/") 
+							img(src="images/logo-black.svg" alt="logo" title="Логотип")
+						.geo.d-flex.align-items-center
+							img(src="images/geospin.svg")
+							address Московская&nbsp;область, 
+								br
+								| п.&nbsp;Новоивановское, Можайское&nbsp;шоссе&nbsp;166
+						.social-icons.d-flex.align-items-center
+							img(src="images/whatsapp.svg" alt="WhatsApp" title="")
+							img(src="images/viber.svg" alt="Viber" title="")
+							img(src="images/telegram.svg" alt="Telegram" title="")
+						.header-info.text-right
+							img(src="images/phone.svg" alt="phone" title="Звоните круглосуточно")
+							a(href="tel:88005505383") +7 (800) 550-53-83
+							br
+							span с 09:00 до 21:00 без выходных
+		include nav
