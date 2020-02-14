@@ -6,7 +6,7 @@
 
 ::selection
 	color: #ffffff
-	background-color: #2A56C7
+	background-color: lighten(#2A56C7, 15%)
 
 h1 
 	font-family: "Golos Web Bold", sans-serif
@@ -30,7 +30,7 @@ a
 		color: $primary-color
 		text-decoration: none
 
-.active 
+.active-link
 	color: $primary-color !important
 
 .geo
@@ -96,13 +96,11 @@ a
 		filter: brightness(.25)
 		z-index: 0
 	h1 
-		position: relative
 		margin-top: 130px
 		font-family: "Golos Web DemiBold", sans-serif
 		font-size: 40px
 		line-height: 48px
 		color: #fff
-		z-index: 10
 	button
 		width: 255px
 		margin-top: 20px
@@ -296,7 +294,11 @@ a
 		color: #fff
 		box-shadow: $first-screen-shadow-rate
 		&:hover 
+			box-shadow: $first-screen-shadow-rate--intense
 			color: #fff
+		&:active 
+			box-shadow: inset 0px 2px 2px rgba($heading-color, .25)
+			background-color: $primary-color-dark
 
 	input[type="file"]
 		margin-bottom: 4px
@@ -556,3 +558,4 @@ a
 				&:hover
 					cursor: pointer
 					
+@import "modal"

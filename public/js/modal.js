@@ -1,0 +1,1 @@
+"use strict";var elements=$(".modal-overlay, .modal");$("button.first-screen--cta").click(function(){elements.addClass("active")}),$(".close-modal").click(function(){elements.removeClass("active")});

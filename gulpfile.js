@@ -12,10 +12,6 @@ const cleanCSS = require('gulp-clean-css');
 gulp.task('sass', () => {
 	return gulp.src('src/sass/**/styles.sass')
 		.pipe(sass())
-		.pipe(purgecss({
-			content: ['views/**/*.pug'],
-			rejected: false
-		}))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS({
 			compatibility: 'ie8'
@@ -45,8 +41,25 @@ gulp.task('img', () =>
     .pipe(gulp.dest('public/images'))
 );
 
+gulp.task('sass-prod', () => {
+	return gulp.src('src/sass/**/styles.sass')
+		.pipe(sass())
+		.pipe(purgecss({
+			content: ['views/**/*.pug'],
+			rejected: false
+		}))
+		.pipe(autoprefixer())
+		.pipe(cleanCSS({
+			compatibility: 'ie8'
+		}))
+		.pipe(rename({
+			suffix: ".min.purged"
+		}))
+		.pipe(gulp.dest('public/css'))
+})
+
 gulp.task('watch', () => {
-	gulp.watch(['src/sass/**/*.sass', 'views/*.pug'], gulp.series('sass'));
+	gulp.watch(['src/sass/**/*.sass', 'views/**/*.pug'], gulp.series('sass'));
 	gulp.watch('src/images/*', gulp.series('img'));
 	gulp.watch('src/js/**/*.js', gulp.series('js'));
 })

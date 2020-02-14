@@ -1,5 +1,6 @@
 include components/header
 include components/mixin_tab
+include components/modal
 
 section
 	.container-fluid
@@ -10,7 +11,7 @@ section
 					.row
 						.col-6.px-0
 							h1 Прием черного и&nbsp;цветного металлолома в&nbsp;Одинцово и&nbsp;Одинцовском&nbsp;районе
-							button(type="button") Отправить заявку на вывоз
+							button.first-screen--cta(type="button") Отправить заявку на вывоз
 						.offset-2.col-4.px-0
 							.feedback
 								h2.text-center Обратный звонок
@@ -217,3 +218,4 @@ include components/cta
 include components/footer
 
 include components/scripts
+script(src="js/modal.js")
