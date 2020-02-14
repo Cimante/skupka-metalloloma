@@ -6,6 +6,17 @@ html(lang="ru-RU")
 		meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
 		link(rel="stylesheet", href="css/styles.min.purged.css")
+		
+		if (link != 'about') 
+			link(rel="prerender" href="/about")
+		if (link != 'services')
+			link(rel="prerender" href="/services")
+		if (link != 'price')
+			link(rel="prerender" href="/price")
+		if (link != 'reviews')
+			link(rel="prerender" href="/reviews")
+		if (link != 'contacts')
+			link(rel="prerender" href="/contacts")
 
 		title Скупка металлолома
 	body
