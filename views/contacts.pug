@@ -1,21 +1,9 @@
-include header
-section
-	.container-fluid
-		.row
-			.col-12.px-0.first-screen
-				img.w-100(src="images/bg.jpg" alt="" title="")
-				.container
-					.row
-						.col-12.px-0
-							.d-flex.justify-content-between.align-items-center
-								h1 Контакты
-								.col-4.feedback
-									h2.text-center Обратный звонок
-									form(action="#").d-flex.flex-column.justify-content-center
-										.form-group
-											input.form-control(type="text" placeholder="Имя" required)
-											input.form-control(type="phone" placeholder="Телефон" required)
-										button(type="submit") Отправить
+include components/header
+
+include components/mixin_first-screen.pug
+
++first-screen('Контакты')
+
 section
 	.container.address
 		.row 
@@ -55,7 +43,7 @@ section
 							a(href="https://tinyurl.com/w9dhw6y" target="_blank") Яндекс.Карты
 							a(href="https://tinyurl.com/ttzck6s" target="_blank") Google Maps
 
-include cta
-include footer
+include components/cta
+include components/footer
 
-include scripts 
+include components/scripts 

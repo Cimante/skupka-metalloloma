@@ -30,6 +30,9 @@ a
 		color: $primary-color
 		text-decoration: none
 
+.active 
+	color: $primary-color !important
+
 .geo
 	margin-left: 30px
 	address
@@ -295,10 +298,8 @@ a
 		&:hover 
 			color: #fff
 
-	input[type="file"]:before 
-		background-color: $primary-color 
-		border: 1px solid $primary-color 
-		padding: 4px 8px
+	input[type="file"]
+		margin-bottom: 4px
 
 .address
 	margin-top: 120px
@@ -331,14 +332,18 @@ a
 			margin-top: 30px
 		.phones 
 			ul 
-				padding-left: 24px
-				list-style-image: url('../images/phone.svg')
+				padding-left: 0px
+				list-style-type: none
 				li 
 					margin-bottom: 8px
 					a:hover 
 						color: $primary-color
-		.email img 
-			margin-right: 8px
+		.email 
+			img 
+				margin-right: 8px
+			a:hover 
+				color: $primary-color
+
 		.navigators
 			a
 				border-bottom: 2px dashed $primary-color
@@ -437,3 +442,117 @@ a
 	.paragraph-indent
 		margin-bottom: 100px
 
+.reviews
+	&--item
+		margin-top: 30px
+		padding: 10px 10px 0px 10px
+		box-shadow: 0px 4px 8px rgba(51, 51, 51, 0.15)
+		border-radius: 4px
+		h3 
+			font-family: "Golos Web DemiBold"
+			font-size: 18px
+			color: $text-color
+		p 
+			color: $text-color
+	.reviews--rating img:not(:last-child())
+		margin-right: 4px
+	.reviews--date
+		font-size: 14px
+		color: $secondary-text-color
+
+.price-list 
+	margin-top: 120px
+	&--warning 
+		display: inline-block 
+		padding: 7px 10px 7px 14px
+		background-color: $light-gray
+		border-left: 3px solid #F74945
+		border-radius: 2px 4px 4px 2px
+		color: $text-color
+	&--navigate 
+		margin-top: 70px
+		padding-left: 0
+		list-style-type: none 
+
+		input[type="radio"]
+			width: 0.1px
+			height: 0.1px
+			opacity: 0
+			overflow: hidden
+			position: absolute
+			z-index: -1
+
+		label:not(:last-child())
+			margin-right: 10px
+
+		label 
+			padding: 3px 10px 3px 10px
+			background-color: $light-gray
+			border-radius: 24px
+			font-size: 14px
+			color: $text-color
+			&:hover
+				background-color: darken($light-gray, 5%)
+				cursor: pointer
+		
+		input[type="radio"]:checked + label 
+			background-color: darken($light-gray, 10%)
+
+		#price1 ~ #price1--content,
+		#price2 ~ #price2--content,
+		#price3 ~ #price3--content,
+		#price4 ~ #price4--content,
+		#price5 ~ #price5--content,
+		#price6 ~ #price6--content,
+		#price7 ~ #price7--content
+			display: none
+
+		#price1:checked ~ #price1--content,
+		#price2:checked ~ #price2--content,
+		#price3:checked ~ #price3--content,
+		#price4:checked ~ #price4--content,
+		#price5:checked ~ #price5--content,
+		#price6:checked ~ #price6--content,
+		#price7:checked ~ #price7--content
+			display: block
+			min-height: 480px
+
+	&--table
+		min-height: 480px
+		table 
+			margin-top: 30px
+			thead 
+				th 
+					vertical-align: text-top
+				th:first-child() 
+					width: 370px
+				tr th 
+					h3
+						margin-bottom: 0px
+						font-family: "Golos Web DemiBold", sans-serif
+						font-weight: 600
+						font-size: 27px
+						color: #333
+					span.description
+						font-family: "Golos Web Regular", sans-serif
+						font-weight: 400
+						font-size: 14px
+						color: $secondary-text-color
+					.price-types 
+						margin-top: 16px
+						span
+							font-family: "Golos Web Medium", sans-serif
+							font-weight: 500
+							color: $text-color
+			tbody 
+				td 
+					vertical-align: middle
+					span 
+						color: $text-color
+				td:nth-child(3)
+					padding: .75rem 1.5rem .75rem 0rem
+			.desc-mark
+				background-color: $secondary-text-color
+				&:hover
+					cursor: pointer
+					

@@ -1,0 +1,30 @@
+nav
+	.container 
+		.row 
+			.col-12.nav
+				ul 
+					li 
+						if link == 'about'
+							a.active(href="#" title="О компании") О компании
+						else 
+							a(href="/about" title="О компании") О компании
+					li 
+						if link == 'services'
+							a.active(href="#" title="Услуги") Услуги
+						else 
+							a(href="/services" title="Услуги") Услуги
+					li 
+						if link == 'price'
+							a.active(href="#" title="Прайс-лист") Прайс-лист
+						else 
+							a(href="/price" title="Прайс-лист") Прайс-лист
+					li 
+						if link == 'reviews'
+							a.active(href="#" title="Отзывы") Отзывы
+						else 
+							a(href="/reviews" title="Отзывы") Отзывы
+					li 
+						if link == 'contacts'
+							a.active(href="#" title="Контакты") Контакты
+						else 
+							a(href="/contacts" title="Контакты") Контакты

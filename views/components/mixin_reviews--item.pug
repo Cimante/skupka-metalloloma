@@ -1,0 +1,20 @@
+mixin reviews--item(title, message, date)
+	.col-6
+		.reviews--item
+			.container 
+				.row 
+					.col-12.px-0
+						.d-flex.justify-content-between 
+							h3= title
+							.reviews--rating 
+								img(src="images/star.svg", alt="")
+								img(src="images/star.svg", alt="")
+								img(src="images/star.svg", alt="")
+								img(src="images/star.svg", alt="")
+								img(src="images/star.svg", alt="")
+				.row 
+					.col-12.px-0
+						p.reviews--date.text-left= date
+				.row 
+					.col-12.px-0
+						p= message

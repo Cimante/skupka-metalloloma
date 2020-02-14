@@ -1,0 +1,64 @@
+include components/header 
+include components/mixin_first-screen.pug
+
++first-screen('Прайс-лист')
+
+section.price-list
+	.container
+		.row
+			.col-12.px-0
+				h2 Прайс-лист
+		.row 
+			.col-12.px-0
+				span.price-list--warning Цены на металлолом также зависят от биржевых цен на металл, цена может изменяться в течение дня.
+
+	.container 
+		.row 
+			.col-12.px-0
+				.price-list--navigate
+					input#price1(type="radio" name="price" checked) 
+					label(for="price1") чёрный металл
+				
+					input#price2(type="radio" name="price") 
+					label(for="price2") медно-латунная группа
+				
+					input#price3(type="radio" name="price")
+					label(for="price3") алюминиевая группа
+				
+					input#price4(type="radio" name="price") 
+					label(for="price4") никелевая группа 
+				
+					input#price5(type="radio" name="price")
+					label(for="price5") свинцово-оловянная группа 
+					
+					input#price6(type="radio" name="price") 
+					label(for="price6") лом кабеля 
+				
+					input#price7(type="radio" name="price") 
+					label(for="price7") прочее 
+
+					section.price-list--table#price1--content
+						include tables/table1
+
+					section.price-list--table#price2--content
+						include tables/table2
+
+					section.price-list--table#price3--content
+						include tables/table3
+
+					section.price-list--table#price4--content
+						include tables/table4
+
+					section.price-list--table#price5--content
+						include tables/table5
+
+					section.price-list--table#price6--content
+						include tables/table6
+						
+					section.price-list--table#price7--content
+						include tables/table7
+
+include components/cta 
+include components/footer 
+
+include components/scripts

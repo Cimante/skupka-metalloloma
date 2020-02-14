@@ -14,9 +14,18 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-	res.render('about.pug')
+	res.render('about.pug', { link: 'about' })
+})
+
+app.get('/price', (req, res) => {
+	res.render('price.pug', { link: 'price' })
+})
+
+app.get('/reviews', (req, res) => {
+	res.render('reviews.pug', { link: 'reviews' })
 })
 
 app.get('/contacts', (req, res) => {
-	res.render('contacts.pug')
+	res.render('contacts.pug', { link: 'contacts' })
 })
+
