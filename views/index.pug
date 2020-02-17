@@ -18,7 +18,7 @@ section
 								form(action="#").d-flex.flex-column.justify-content-center
 									.form-group
 										input.form-control#first-screen--name(type="text" placeholder="Имя" required)
-										input.form-control#first-screen--phone(type="phone" placeholder="Телефон" required)
+										input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
 									button#first-screen--submit(type="submit") Отправить
 
 section
@@ -89,9 +89,11 @@ section
 					br
 					| Возможна работа по&nbsp;договору как&nbsp;в&nbsp;разовом, так&nbsp;и&nbsp;в&nbsp;постоянном&nbsp;формате.
 			.col-3
-				img.w-100(src="images/li1.png" alt="" title="")
+				a(data-fancybox="licenses" href="images/li1.png")
+					img.w-100(src="images/li1_small.png" alt="" title="")
 			.col-3
-				img.w-100(src="images/li2.png", alt="" title="")
+				a(data-fancybox="licenses" href="images/li2.png")
+					img.w-100(src="images/li2_small.png" alt="" title="")
 
 section
 	.container.partners 
@@ -166,11 +168,17 @@ section
 					form#feedback-with-images(action="/mail" method="POST" enctype="multipart/form-data")
 						.form-group.d-flex.flex-column
 							label.text-left(for="phone") Телефон
-							input#rate-phone.form-control(type="text" name="phone" placeholder="+7 (999) 999-99-99" required)
+							input#rate-phone.form-control.inputmask(type="text" name="phone" placeholder="+7 (999) 999-99-99" required)
 						.form-group.d-flex.flex-column
-							label(for="photo1") Фото
-							input#photo1.form-control-file(type="file" name="photo" accept="image/jpeg" required)
-							//- button.add-photo(type="button") Добавить фото
+							//-
+								label#label-photo(for="photo") 
+									span Выбрать фото...
+								input#photo.form-control-file(type="file" name="photo" accept="image/jpeg" required)
+								//- button.add-photo(type="button") Добавить фото
+							.file-input
+								input(type="file")
+								span.button Выбрать
+								span.label(data-js-label) ...
 
 						.d-flex.justify-content-center
 							button.btn.rate-scrap--submit(type="submit" form="feedback-with-images") Отправить

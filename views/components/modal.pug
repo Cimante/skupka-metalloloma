@@ -8,16 +8,16 @@
 				.row
 					.col-12
 						h3 Заявка на вывоз металлолома
-						form(action="#")
+						form#cta-modal(action="/mail", method="POST")
 							.row 
 								.col
 									.form-group
 										label(for="cta--name") Имя
-										input#cta--name.form-control.form-control-lg(type="text" name="cta--name" required)
+										input#cta-modal--name.form-control.form-control-lg(type="text" name="cta--name" required)
 								.col
 									.form-group
 										label(for="cta--phone") Телефон
-										input#cta-phone.form-control.form-control-lg(type="tel" name="cta--phone" required)
+										input#cta-modal--phone.form-control.form-control-lg.inputmask(type="tel" name="cta--phone" required)
 							.row 
 								.col
 									.d-flex.justify-content-center

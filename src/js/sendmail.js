@@ -20,6 +20,9 @@ $(document).ready(() => {
 					alert("Успешно")
 					$('input.form-control#first-screen--name').val("")
 					$('input.form-control#first-screen--phone').val("")
+				},
+				error: function() {
+					alert('Произошла ошибка при отправке')
 				}
 			})
 		})
@@ -56,6 +59,9 @@ $(document).ready(() => {
 				success: function(res) {
 					alert('Успешно!')
 					$("input#rate-phone.form-control").val("");
+				},
+				error: function() {
+					alert('Произошла ошибка при отправке')
 				}
 			})
 		})
@@ -78,6 +84,34 @@ $(document).ready(() => {
 				alert('Успешно');
 				$('input#bottom-feedback--name.form-control').val("");
 				$('input#bottom-feedback--phone.form-control').val("");
+			},
+			error: function() {
+				alert('Произошла ошибка при отправке')
+			}
+		})
+	})
+
+	$('#cta-modal').on('submit', (e) => {
+		e.preventDefault();
+
+		const info = {
+			"Имя": $('#cta-modal--name').val(),
+			"Телефон": $('#cta-modal--phone').val()
+		}
+
+		$.ajax({
+			type: 'POST',
+			url: '/mail',
+			contentType: 'application/json',
+			data: JSON.stringify(info),
+			success: function(res) {
+				alert('Успешно');
+				$('#cta-modal--name').val("");
+				$('#cta-modal--phone').val("");
+				localion.reload();
+			},
+			error: function() {
+				alert('Произошла ошибка при отправке')
 			}
 		})
 	})

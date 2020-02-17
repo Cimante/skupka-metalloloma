@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
+    "inputmask": "^5.0.3",
     "nodemailer": "^6.4.2",
     "pug": "^2.0.4"
   },

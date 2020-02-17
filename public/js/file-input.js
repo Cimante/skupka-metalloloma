@@ -1,0 +1,1 @@
+"use strict";for(var inputs=document.querySelectorAll(".file-input"),i=0,len=inputs.length;i<len;i++)customInput(inputs[i]);function customInput(t){var n=t.querySelector('[type="file"]'),u=t.querySelector("[data-js-label]");n.onchange=n.onmouseout=function(){if(n.value){var e=n.value.replace(/^.*[\\\/]/,"");t.className+=" -chosen",u.innerText=e}}}

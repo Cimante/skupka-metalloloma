@@ -1,4 +1,6 @@
 $(document).ready(() => {
+	$('input.inputmask').inputmask("+7 (999) 999-99-99");
+
 	$('.faq input').on('click', () => {
 		let selector = $('.faq input:checked').attr('id');
 		switch (selector) {

@@ -1,0 +1,46 @@
+@import "ui"
+  
+.file-input
+  display: inline-block
+  text-align: left
+  background: #fff
+  padding: 16px 16px 16px 0
+  width: 400px
+  position: relative
+  border-radius: 3px
+  border: 1px solid $light-gray
+
+  >
+    [type='file']
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      z-index: 10
+      cursor: pointer
+
+    .button
+      font-family: "Golos Web Regular", sans-serif
+      font-weight: 400
+      display: inline-block
+      cursor: pointer
+      background: $light-gray
+      padding: 8px 16px
+      margin-left: 16px
+      margin-right: 8px
+      border-radius: 4px
+      transition: background-color .2s ease
+
+  &:hover > .button
+    background: $primary-color
+    color: white
+    transition: background-color .2s ease
+
+  > .label
+    color: $text-color !important
+    white-space: nowrap
+
+  &.-chosen > .label
+    opacity: 1
