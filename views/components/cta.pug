@@ -11,8 +11,7 @@ section
 								form.d-flex.justify-content-center#bottom-feedback(action="/mail" method="POST")
 									.row
 										.col
-											.d-flex.flex-row
-												input#bottom-feedback--name.form-control(type="text" name="Name" required placeholder="Имя")
-												input#bottom-feedback--phone.form-control.inputmask(type="phone" name="Phone" required placeholder="Телефон")
-										.col
-											button.btn#bottom-feedback--submit(type="submit" form="bottom-feedback") Заказать
+											.d-flex.flex-column.flex-lg-row.justify-content-center.align-items.center
+												input#bottom-feedback--name.form-control.mb-3.mb-lg-0(type="text" name="Name" required placeholder="Имя")
+												input#bottom-feedback--phone.form-control.inputmask.mb-3.mb-lg-0(type="phone" name="Phone" required placeholder="Телефон")
+												button.btn#bottom-feedback--submit(type="submit" form="bottom-feedback") Заказать
