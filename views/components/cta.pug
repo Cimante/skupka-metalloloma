@@ -8,11 +8,11 @@ section
 						.col-12
 							.content
 								h2.text-center Оставьте заявку и мы вам перезвоним
-								form.d-flex.justify-content-center(action="#")
+								form.d-flex.justify-content-center#bottom-feedback(action="/mail" method="POST")
 									.row
 										.col
 											.d-flex.flex-row
-												input#feedback--name.form-control(type="text" name="Name" required placeholder="Имя")
-												input#feedback--phone.form-control(type="phone" name="Phone" required placeholder="Телефон")
+												input#bottom-feedback--name.form-control(type="text" name="Name" required placeholder="Имя")
+												input#bottom-feedback--phone.form-control(type="phone" name="Phone" required placeholder="Телефон")
 										.col
-											button.btn(type="submit") Заказать
+											button.btn#bottom-feedback--submit(type="submit" form="bottom-feedback") Заказать

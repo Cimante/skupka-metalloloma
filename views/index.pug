@@ -17,9 +17,9 @@ section
 								h2.text-center Обратный звонок
 								form(action="#").d-flex.flex-column.justify-content-center
 									.form-group
-										input.form-control(type="text" placeholder="Имя" required)
-										input.form-control(type="phone" placeholder="Телефон" required)
-									button(type="submit") Отправить
+										input.form-control#first-screen--name(type="text" placeholder="Имя" required)
+										input.form-control#first-screen--phone(type="phone" placeholder="Телефон" required)
+									button#first-screen--submit(type="submit") Отправить
 
 section
 	.container.about-us
@@ -163,17 +163,17 @@ section
 		.row
 			.col-12
 				.d-flex.flex-column.align-items-center
-					form(action="#")
+					form#feedback-with-images(action="/mail" method="POST" enctype="multipart/form-data")
 						.form-group.d-flex.flex-column
 							label.text-left(for="phone") Телефон
-							input#phone.form-control(type="text" name="phone" placeholder="+7 (999) 999-99-99" required)
+							input#rate-phone.form-control(type="text" name="phone" placeholder="+7 (999) 999-99-99" required)
 						.form-group.d-flex.flex-column
 							label(for="photo1") Фото
-							input#photo1.form-control-file(type="file" name="photo" required)
-							button.add-photo(type="button") Добавить фото
+							input#photo1.form-control-file(type="file" name="photo" accept="image/jpeg" required)
+							//- button.add-photo(type="button") Добавить фото
 
 						.d-flex.justify-content-center
-							button.btn.rate-scrap--submit(type="submit") Отправить
+							button.btn.rate-scrap--submit(type="submit" form="feedback-with-images") Отправить
 
 section
 	.container.address
