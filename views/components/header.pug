@@ -5,6 +5,9 @@ html(lang="ru-RU")
 		meta(name="viewport", content="initial-scale=1.0", width=device-width)
 		meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
+		meta(name="description" content=meta['description'])
+		meta(name="keywords" content=meta['keywords'])
+
 		link(rel="stylesheet", href="css/styles.min.purged.css")
 		link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
 		
@@ -19,7 +22,7 @@ html(lang="ru-RU")
 		if (link != 'contacts')
 			link(rel="prerender" href="/contacts")
 
-		title Скупка металлолома
+		title= meta['title']
 	body
 		header
 			.container-xl.header
