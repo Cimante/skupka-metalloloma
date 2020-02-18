@@ -2,6 +2,10 @@ const express = require('express');
 const mailer = require('./nodemailer');
 const bodyParser = require('body-parser');
 
+const https = require('https');
+const http = require('http');
+const fs = require('fs')
+
 const app = express();
 
 app.set('view engine', 'pug');
@@ -9,9 +13,18 @@ app.use(express.static('public'));
 app.use(express.json())
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-
+/*
 app.listen(3000, () => {
 	console.log('Meowdy! Node is working on port 3000!')
+});
+*/
+const httpsOptions = {
+	key: fs.readFileSync('privatekey.key'),
+	cert: fs.readFileSync('certificate.crt')
+}
+
+https.createServer(httpsOptions, app).listen(443, () => {
+	console.log('Meowdy! Node is working on port 443!')
 });
 
 app.get('/', (req, res) => {
