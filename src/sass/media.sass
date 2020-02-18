@@ -2,7 +2,7 @@
 	.geo 
 		margin-left: 20px
 		address 
-			max-width: 20vw
+			max-width: 24vw
 
 	.social-icons
 		margin-left: 40px
@@ -26,11 +26,25 @@
 		img:nth-child(2), img:nth-child(3)
 			margin-left: 12px
 
+	.about, .services, .price-list, .reviews
+		margin-top: 140px
+
 	.about-us 
 		margin-top: 180px
+	.about--heading 
+		margin-top: 0px
+
+	.not-main
+		h1 
+			margin-top: 80px
+		img 
+			height: 240px
 
 	.process 
+		h2 
+			margin-bottom: 20px
 		ul 
+			margin-top: 24px
 			padding-left: 0
 		
 	.process ul li p 
@@ -39,6 +53,7 @@
 		max-width: unset
 		margin-left: 16px
 		margin-bottom: 0
+		font-size: 16px
 		text-align: left
 		
 	.process ul li img 
@@ -63,11 +78,54 @@
 	.footer-indent
 		margin-top: 0px
 
+	.services 
+		p 
+			font-size: 18px
+		&--types-heading 
+			margin-top: 80px
+		&--types 
+			li
+				height: auto
+				margin-bottom: .75rem
+
 @media screen and (max-width: 768px) 
+	.header
+		.social-icons
+			display: none !important
+	.navbar-light .navbar-nav
+		li.nav-item 
+			font-size: 1.25rem
+			margin: .5rem 2rem .5rem 0rem
+		li.nav-item:not(:first-child()):before
+			display: none
+
 	.partners 
-		.logo
+		img
 			width: 20vw
 			height: auto
+
+	.price-list--navigate 
+		margin-top: 40px
+
+	.price-list--table
+		table 
+			thead tr th 
+				h3
+					font-size: 18px
+				span.description 
+					font-size: 11px
+				.price-types 
+					font-size: 14px
+				&:nth-child(n)
+					max-width: 33%
+			tbody tr td span 
+				font-size: 14px
+
+
+@media screen and (max-width: 640px)
+	.header 
+		.geo
+			display: none !important
 		
 @media screen and (max-width: 576px)
 
@@ -78,8 +136,6 @@
 		.logo
 			width: 160px
 			height: auto
-		.geo, .social-icons
-			display: none !important
 
 	.first-screen 
 		h1 

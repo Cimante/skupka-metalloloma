@@ -5,16 +5,12 @@ include components/mixin_first-screen.pug
 +first-screen('Контакты')
 
 section
-	.container.address
+	.container-xl.address
 		.row 
-			.col-12.px-0
+			.col-12.px-lx-0
 				h2 Контакты
 		.row.d-flex.align-items-center
-			.col-6.px-0
-				.address--map
-					//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
-					iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;source=constructor" width="500" height="400" frameborder="0")
-			.col-6.px-0
+			.col-12.col-lg-6.col-6.d-flex.justify-content-center
 				.address--info
 					.location
 						h3 Расположение
@@ -42,6 +38,12 @@ section
 						.d-flex.justify-content-start
 							a(href="https://tinyurl.com/w9dhw6y" target="_blank") Яндекс.Карты
 							a(href="https://tinyurl.com/ttzck6s" target="_blank") Google Maps
+
+			.col-12.col-lg-6.d-flex.justify-content-center.px-0.mt-5.mt-xl-0
+				.address--map
+					//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+					iframe.w-100(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;source=constructor" width="500" height="400" frameborder="0")
+			
 
 include components/cta
 include components/footer

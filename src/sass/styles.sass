@@ -30,8 +30,27 @@ a
 		color: $primary-color
 		text-decoration: none
 
-.active-link
-	color: $primary-color !important
+.navbar-light .navbar-nav 
+	margin: 1rem 0rem
+	.active>.nav-link
+		font-family: 'Golos Web Medium', sans-serif
+		font-weight: 500
+		color: $primary-color
+	.nav-link
+		display: inline
+		color: $text-color
+		&:hover 
+			color: $primary-color-light
+
+	li.nav-item:not(:first-child()):before
+		content: ""
+		display: inline-block
+		width: 4px
+		height: 4px
+		margin-bottom: 3px
+		background-color: $primary-color
+		border-radius: 4px
+
 
 .geo
 	margin-left: 30px
@@ -45,7 +64,7 @@ a
 
 .social-icons
 	margin-left: 105px
-	img:nth-child(2), img:nth-child(3)
+	a:nth-child(2), a:nth-child(3)
 		margin-left: 20px
 
 .header-info
@@ -61,34 +80,6 @@ a
 	padding-bottom: 20px
 	border-bottom: 1px solid $light-gray
 	
-
-.nav
-	ul
-		margin-top: 26px
-		margin-bottom: 24px
-		padding-left: 0
-		margin-left: 0
-	li
-		&:not(:first-child()):before
-			content: ""
-			display: inline-block
-			width: 4px
-			height: 4px
-			margin-bottom: 3px
-			margin-right: 11px
-			background-color: $primary-color
-			border-radius: 4px
-
-		display: inline-block
-		a
-			text-decoration: none
-			font-size: 18px
-			line-height: 24px
-			color: $text-color
-			margin-right: 14px
-			&:hover
-				color: $primary-color
-
 .first-screen 
 	img 
 		position: absolute
@@ -291,7 +282,6 @@ a
 			outline-color: $primary-color
 
 	&--submit
-		margin-top: 16px
 		background-color: $primary-color
 		color: #fff
 		box-shadow: $first-screen-shadow-rate
@@ -570,14 +560,14 @@ a
 		font-family: "Golos Web Medium"
 		font-size: 32px
 		font-weight: 500
-		color: $text-color
+		color: $heading-color
 	&--types
 		ol 
 			padding-inline-start: 0px !important
 		li 
 			height: 36px
 			span 
-				font-size: 18px
+				font-size: 16px
 				color: $text-color
 
 @import "file-input"	

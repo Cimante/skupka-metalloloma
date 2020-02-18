@@ -79,20 +79,20 @@ section
 						span Бесплатный самостоятельный вывоз металла в Москве и Московской области
 
 section 
-	.container-xl.license 
+	.container.license 
 		.row 
 			.col-12 
 				h2 Лицензии 
 		.row.d-flex.align-items-center 
-			.col-12.col-md-6
+			.col-12.col-lg-6
 				p Наш пункт приема металлолома работает по лицензии, что&nbsp;позволяет нам официально оформлять весь поступающий к&nbsp;нам&nbsp;металл. Принимаем лом как у&nbsp;частных лиц, так&nbsp;и&nbsp;у&nbsp;предприятий.
 					br
 					| Возможна работа по&nbsp;договору как&nbsp;в&nbsp;разовом, так&nbsp;и&nbsp;в&nbsp;постоянном&nbsp;формате.
 			.d-flex.justify-content-center.align-items-center
-				.col-4
+				.col-6.offset-md-4.col-md-4.col-lg-3
 					a(data-fancybox="licenses" href="images/li1.png")
 						img.w-100(src="images/li1_small.png" alt="" title="")
-				.col-4
+				.col-6.col-md-4.col-lg-3
 					a(data-fancybox="licenses" href="images/li2.png")
 						img.w-100(src="images/li2_small.png" alt="" title="")
 
@@ -115,7 +115,7 @@ section
 				h2 Процесс работы 
 		.row 
 			.col-12
-				ul.d-flex.flex-lg-row.flex-column.justify-content-start.align-items-start
+				ul.d-flex.flex-lg-row.flex-column.justify-content-start.align-items-start.ml-3.ml-sm-5.ml-lg-0
 					li
 						.d-flex.flex-lg-column.justify-content-lg-center.align-items-lg-center.justify-content-start.align-items-center.mb-3.md-md-0
 							img(src="images/step1.svg" alt="" title="")
@@ -170,12 +170,15 @@ section
 						.form-group.d-flex.flex-column
 							label.text-left(for="phone") Телефон
 							input#rate-phone.form-control.inputmask(type="text" name="phone" placeholder="+7 (999) 999-99-99" required)
-						.form-group.d-flex.flex-column
-							.file-input
+						.form-group
+							.file-input.d-flex.flex-column
 								input(type="file")
-								span.button Выбрать 
-								span.label(data-js-label) ...
-
+								span.label.text-center(data-js-label) ...
+								span.button.mt-2.d-flex.align-items-center.justify-content-center
+									svg(aria-hidden="true" data-prefix="fas" data-icon="upload" class="svg-inline--fa fa-upload fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+										path(d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z")
+									span Загрузить фото
+							
 						.d-flex.justify-content-center
 							button.btn.rate-scrap--submit(type="submit" form="feedback-with-images") Отправить
 
@@ -185,11 +188,11 @@ section
 			.col-12.px-lx-0
 				h2 Адрес пункта приёма
 		.row.d-flex.align-items-center
-			.col-12.col-lg-6.px-0
+			.col-12.col-lg-6.d-flex.justify-content-center.px-0
 				.address--map
 					//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
-					iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;source=constructor" width="500" height="400" frameborder="0")
-			.col-12.col-lg-6.col-6.mt-5.mt-xl-0
+					iframe.w-100(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3cde61a32b3b52913f23d547f2cdbe40f019313d723d51c8811e5b2b7c04cfd&amp;source=constructor" width="500" height="400" frameborder="0")
+			.col-12.col-lg-6.col-6.mt-5.mt-xl-0.d-flex.justify-content-center
 				.address--info
 					.location
 						h3 Расположение

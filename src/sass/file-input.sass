@@ -22,21 +22,30 @@
       cursor: pointer
 
     .button
-      font-family: "Golos Web Regular", sans-serif
-      font-weight: 400
       display: inline-block
-      cursor: pointer
-      background: $light-gray
       padding: 8px 16px
       margin-left: 16px
       margin-right: 8px
       border-radius: 4px
+      background: $light-gray
+      font-family: "Golos Web Regular", sans-serif
+      font-weight: 400
+      color: $text-color
+      cursor: pointer
       transition: background-color .2s ease
+      svg 
+        width: 16px
+        height: 16px
+        margin-right: 8px
+        path 
+          fill: $secondary-text-color
 
   &:hover > .button
     background: $primary-color
     color: white
     transition: background-color .2s ease
+    > svg path 
+      fill: #fff
 
   > .label
     color: $text-color !important

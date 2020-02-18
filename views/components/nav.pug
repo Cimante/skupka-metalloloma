@@ -1,30 +1,40 @@
-nav
-	.container-xl
-		.row 
-			.col-12.nav.d-lg-flex.justify-content-sm-center.justify-content-xl-start.pl-xl-4
-				ul 
-					li 
-						if link == 'about'
-							a.active-link(href="#" title="О компании") О компании
-						else 
-							a(href="/about" title="О компании") О компании
-					li 
-						if link == 'services'
-							a.active-link(href="#" title="Услуги") Услуги
-						else 
-							a(href="/services" title="Услуги") Услуги
-					li 
-						if link == 'price'
-							a.active-link(href="#" title="Прайс-лист") Прайс-лист
-						else 
-							a(href="/price" title="Прайс-лист") Прайс-лист
-					li 
-						if link == 'reviews'
-							a.active-link(href="#" title="Отзывы") Отзывы
-						else 
-							a(href="/reviews" title="Отзывы") Отзывы
-					li 
-						if link == 'contacts'
-							a.active-link(href="#" title="Контакты") Контакты
-						else 
-							a(href="/contacts" title="Контакты") Контакты
+.container-md
+	nav.navbar.navbar-expand-md.navbar-light.px-0.d-flex.justify-content-end
+		button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
+			span.navbar-toggler-icon
+		.collapse.navbar-collapse#navbarNav
+			ul.navbar-nav
+				if link == 'about'
+					li.nav-item.active.text-right
+						a.nav-link(href="#") О компании
+				else
+					li.nav-item.text-right
+						a.nav-link(href="/about") О компании
+
+				if link == 'services'
+					li.nav-item.active.text-right
+						a.nav-link.text(href="#") Услуги
+				else
+					li.nav-item.text-right
+						a.nav-link.text(href="/services") Услуги
+
+				if link == 'price'
+					li.nav-item.active.text-right
+						a.nav-link.text(href="#") Прайс-лист
+				else
+					li.nav-item.text-right
+						a.nav-link.text(href="/price") Прайс-лист
+
+				if link == 'reviews'
+					li.nav-item.active.text-right
+						a.nav-link.text(href="#") Отзывы
+				else
+					li.nav-item.text-right
+						a.nav-link.text(href="/reviews") Отзывы
+
+				if link == 'contacts'
+					li.nav-item.active.text-right
+						a.nav-link.text(href="#") Контакты
+				else
+					li.nav-item.text-right
+						a.nav-link.text(href="/contacts") Контакты
