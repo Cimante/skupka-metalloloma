@@ -26,6 +26,10 @@ const httpsOptions = {
 https.createServer(httpsOptions, app).listen(443, () => {
 	console.log('Meowdy! Node is working on port 443!')
 });
+http.createServer(function(req, res) {
+	res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+	res.end();
+}).listen(80);
 
 app.get('/', (req, res) => {
 	const meta = {
