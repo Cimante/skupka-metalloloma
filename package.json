@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "inputmask": "^5.0.3",
     "nodemailer": "^6.4.2",
+    "pm2": "^4.2.3",
     "pug": "^2.0.4"
   },
   "devDependencies": {
