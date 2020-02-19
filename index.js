@@ -103,7 +103,7 @@ app.post('/mail', (req, res) => {
 		};
 		const message_duplicate = {
 			from: '<skupkametalloloma2020@yandex.ru>',
-			to: '<cloudplaid@yandex.ru>',
+			to: '<zakazarakelovgroup@yandex.ru>',
 			subject: 'OOO Стандарт: заявка на оценку лома',
 			html: `
 			<h3>На сайте skupka-metalloloma.com отправили новую заявку на оценку лома</h3>
@@ -130,7 +130,7 @@ app.post('/mail', (req, res) => {
 		};
 		const message_duplicate = {
 			from: '<skupkametalloloma2020@yandex.ru>',
-			to: '<cloudplaid@yandex.ru>',
+			to: '<zakazarakelovgroup@yandex.ru>',
 			subject: 'Новая заявка с сайта',
 			html: `
 			<h3>На сайте skupka-metalloloma оставили новую заявку</h3>
