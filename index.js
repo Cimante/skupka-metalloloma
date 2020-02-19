@@ -10,9 +10,9 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.use(express.static('public'));
-app.use(express.json())
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+// app.use(express.json()) -- блокирует файлы больше 100кб :(
+app.use(bodyParser.json({limit: '20mb', extended: true}));
+app.use(bodyParser.urlencoded({limit: '20mb', extended: false}));
 /*
 app.listen(3000, () => {
 	console.log('Meowdy! Node is working on port 3000!')
@@ -89,30 +89,57 @@ app.get('/contacts', (req, res) => {
 app.post('/mail', (req, res) => {
 	if (req.body.Photo) {
 		const message = {
-			from: '<index@mail.com>',
-			to: '<inbox@yandex.ru>',
-			subject: 'Smth new',
-			html: `<a href="tel:${req.body.Phone}">${req.body.Phone}</a>`,
+			from: '<skupkametalloloma2020@yandex.ru>',
+			to: '<skupkametalloloma2020@yandex.ru>',
+			subject: 'Оцените этот лом как можно скорее',
+			html: `
+			<span>Телефон для связи: </span>
+			<a href="tel:${req.body.Phone}">${req.body.Phone}</a>`,
 			attachments: [
 				{
 					path: req.body.Photo.content
 				}
 			]
-			
+		};
+		const message_duplicate = {
+			from: '<skupkametalloloma2020@yandex.ru>',
+			to: '<cloudplaid@yandex.ru>',
+			subject: 'OOO Стандарт: заявка на оценку лома',
+			html: `
+			<h3>На сайте skupka-metalloloma.com отправили новую заявку на оценку лома</h3>
+			<span>Телефон для связи: </span>
+			<a href="tel:${req.body.Phone}">${req.body.Phone}</a>`,
+			attachments: [
+				{
+					path: req.body.Photo.content
+				}
+			]
 		};
 		mailer(message);
+		mailer(message_duplicate);
 	} else {
 		const message = {
-			from: '<index@mail.com>',
-			to: '<inbox@yandex.ru>',
-			subject: 'Smth new',
+			from: '<skupkametalloloma2020@yandex.ru>',
+			to: '<skupkametalloloma2020@yandex.ru>',
+			subject: 'Новая заявка с сайта',
 			html: `
 			<h3>Новая заявка с сайта</h3>
 			<p><b>Имя:</b> ${req.body["Имя"]}</p>
 			<p><b>Телефон:</b> ${req.body["Телефон"]}</p>
 			`,
+		};
+		const message_duplicate = {
+			from: '<skupkametalloloma2020@yandex.ru>',
+			to: '<cloudplaid@yandex.ru>',
+			subject: 'Новая заявка с сайта',
+			html: `
+			<h3>На сайте skupka-metalloloma оставили новую заявку</h3>
+			<p><b>Имя:</b> ${req.body["Имя"]}</p>
+			<p><b>Телефон:</b> ${req.body["Телефон"]}</p>
+			`,
 		}
 		mailer(message);
+		mailer(message_duplicate);
 	}
 	res.sendStatus(200)
 })

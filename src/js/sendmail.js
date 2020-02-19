@@ -41,8 +41,7 @@ $(document).ready(() => {
 			"Phone": $("input#rate-phone.form-control").val(),
 		};
 
-		var files = $('input.form-control-file');
-		
+		var files = $('input[type="file"]');
 		
 		var file = files[0].files[0]
 		getBase64(file, function(result) {
@@ -59,6 +58,7 @@ $(document).ready(() => {
 				success: function(res) {
 					alert('Успешно!')
 					$("input#rate-phone.form-control").val("");
+					$('input[type="file"]').val("");
 				},
 				error: function() {
 					alert('Произошла ошибка при отправке')
