@@ -90,7 +90,7 @@ app.post('/mail', (req, res) => {
 	if (req.body.Photo) {
 		const message = {
 			from: '<skupkametalloloma2020@yandex.ru>',
-			to: '<skupkametalloloma2020@yandex.ru>',
+			to: '<standart-lom@inbox.ru>',
 			subject: 'Оцените этот лом как можно скорее',
 			html: `
 			<span>Телефон для связи: </span>
@@ -120,7 +120,7 @@ app.post('/mail', (req, res) => {
 	} else {
 		const message = {
 			from: '<skupkametalloloma2020@yandex.ru>',
-			to: '<skupkametalloloma2020@yandex.ru>',
+			to: '<standart-lom@inbox.ru>',
 			subject: 'Новая заявка с сайта',
 			html: `
 			<h3>Новая заявка с сайта</h3>
