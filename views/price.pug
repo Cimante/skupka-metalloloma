@@ -26,16 +26,19 @@ section.price-list
 					label(for="price3") алюминиевая группа
 				
 					input#price4(type="radio" name="price") 
-					label(for="price4") никелевая группа 
+					label(for="price4") нержавеющая сталь 
 				
 					input#price5(type="radio" name="price")
 					label(for="price5") свинцово-оловянная группа 
 					
 					input#price6(type="radio" name="price") 
 					label(for="price6") лом кабеля 
-				
+
 					input#price7(type="radio" name="price") 
-					label(for="price7") прочее 
+					label(for="price7") аккумуляторы
+				
+					input#price8(type="radio" name="price") 
+					label(for="price8") прочее 
 
 					section.price-list--table#price1--content
 						include tables/table1
@@ -54,9 +57,12 @@ section.price-list
 
 					section.price-list--table#price6--content
 						include tables/table6
-						
+
 					section.price-list--table#price7--content
 						include tables/table7
+						
+					section.price-list--table#price8--content
+						include tables/table8
 
 include components/cta 
 include components/footer 

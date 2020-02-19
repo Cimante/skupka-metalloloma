@@ -31,7 +31,7 @@ a
 		text-decoration: none
 
 .navbar-light .navbar-nav 
-	margin: 1rem 0rem
+	margin: 1rem auto
 	.active>.nav-link
 		font-family: 'Golos Web Medium', sans-serif
 		font-weight: 500
@@ -39,6 +39,8 @@ a
 	.nav-link
 		display: inline
 		color: $text-color
+		font-size: 18px
+		margin: 0 8px
 		&:hover 
 			color: $primary-color-light
 
@@ -67,6 +69,26 @@ a
 	a:nth-child(2), a:nth-child(3)
 		margin-left: 20px
 
+.upper-advantages
+	background-color: #272727
+	min-height: 60px
+	ul 
+		list-style: none
+		padding-left: 0
+		li 
+			margin-top: 18px
+			&:not(:last-child) 
+				margin-right: 64px
+		span 
+			display: inline-block
+			max-width: 164px
+			font-family: "Golos Web Medium", sans-serif
+			font-weight: 500
+			font-size: 14px
+			margin-left: 8px
+			line-height: 14px !important
+			color: #fff
+
 .header-info
 	margin-left: 70px
 	img 
@@ -84,15 +106,16 @@ a
 	img 
 		position: absolute
 		height: 480px
-		filter: brightness(.25)
+		// filter: brightness(.5) contrast(120%) saturate(100%)
 		z-index: 0
 		object-fit: cover
 	h1 
 		margin-top: 130px
 		font-family: "Golos Web DemiBold", sans-serif
-		font-size: 40px
+		font-size: 36px
 		line-height: 48px
 		color: #fff
+		text-shadow: 0 1px 1px #000
 	button
 		width: 255px
 		margin-top: 20px
@@ -495,7 +518,8 @@ a
 		#price4 ~ #price4--content,
 		#price5 ~ #price5--content,
 		#price6 ~ #price6--content,
-		#price7 ~ #price7--content
+		#price7 ~ #price7--content,
+		#price8 ~ #price8--content
 			display: none
 
 		#price1:checked ~ #price1--content,
@@ -504,7 +528,8 @@ a
 		#price4:checked ~ #price4--content,
 		#price5:checked ~ #price5--content,
 		#price6:checked ~ #price6--content,
-		#price7:checked ~ #price7--content
+		#price7:checked ~ #price7--content,
+		#price8:checked ~ #price8--content
 			display: block
 			min-height: 480px
 
