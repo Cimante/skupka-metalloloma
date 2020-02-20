@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Sitemap: https://skupka-metalloloma.com
+
+User-agent: Yandex
+Disallow: 
+Sitemap: https://skupka-metalloloma.com
