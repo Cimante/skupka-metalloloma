@@ -4,7 +4,10 @@ mixin first-screen(header)
 		.container-fluid
 			.row
 				.col-12.px-0.first-screen.not-main
-					img.w-100(src="images/bg.jpg" alt="" title="")
+					picture
+						source.w-100(type="image/webp" srcset="images/bg.webp")
+						source.w-100(type="image/jpeg" srcset="images/bg.jpg")
+						img.w-100(src="images/bg.jpg" alt="" title="")
 					.container
 						.row
 							//- .align-items-md-start.align-items-center.justify-content-center

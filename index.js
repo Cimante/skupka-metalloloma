@@ -1,6 +1,7 @@
 const express = require('express');
 const mailer = require('./nodemailer');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 
 const https = require('https');
 const http = require('http');
@@ -10,6 +11,7 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.use(express.static('public'));
+app.use(compression());
 // app.use(express.json()) -- блокирует файлы больше 100кб :(
 app.use(bodyParser.json({limit: '20mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '20mb', extended: false}));

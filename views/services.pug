@@ -11,7 +11,10 @@ section.services
 		.row 
 			.col-12
 				p 
-					img.w-50.services--img.float-right(src="images/a1.png", alt="", title="")
+					picture
+						source.w-50.services--img.float-right(type="image/webp" srcset="images/a1.webp")
+						source.w-50.services--img.float-right(type="image/jpeg" srcset="images/a1.jpg")
+						img.w-50.services--img.float-right(src="images/a1.jpg", alt="", title="")
 					| Демонтаж и&nbsp;вывоз металлолома&nbsp;– востребованная услуга в&nbsp;сфере промышленности и&nbsp;бизнеса. 
 					| Она&nbsp;требует высокого профессионализма, ответственности и&nbsp;внимательности. 
 					| Демонтаж&nbsp;металлолома включает в&nbsp;себя работу с&nbsp;конструкциями любого&nbsp;типа. 

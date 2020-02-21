@@ -8,6 +8,7 @@ const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 const purgecss = require('gulp-purgecss');
 const cleanCSS = require('gulp-clean-css');
+const webp = require('gulp-webp');
 
 gulp.task('sass', () => {
 	return gulp.src('src/sass/**/styles.sass')
@@ -39,6 +40,12 @@ gulp.task('img', () =>
         imagemin.svgo({})
     ]))
     .pipe(gulp.dest('public/images'))
+);
+
+gulp.task('webp', () => 
+	gulp.src('src/images/**/*.jpg', 'src/image/**/*.png')
+		.pipe(webp())
+		.pipe(gulp.dest('public/images'))
 );
 
 gulp.task('sass-prod', () => {
