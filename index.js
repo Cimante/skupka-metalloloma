@@ -160,3 +160,7 @@ app.get('/sitemap.xml', function(req, res) {
 app.get('/robots.txt', function(req, res) {
 	res.sendFile(__dirname + "/robots.txt")
 })
+
+app.get('/manifest.json', function(req, res) {
+	res.sendFile(__dirname + "/manifest.json")
+})
