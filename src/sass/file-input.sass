@@ -5,7 +5,7 @@
   text-align: left
   background: #fff
   padding: 16px 16px 16px 0
-  width: 400px
+  min-width: 320px
   position: relative
   border-radius: 3px
   border: 1px solid $light-gray
@@ -53,3 +53,7 @@
 
   &.-chosen > .label
     opacity: 1
+
+@media screen and (max-width: 320px)
+  .file-input
+    min-width: 240px

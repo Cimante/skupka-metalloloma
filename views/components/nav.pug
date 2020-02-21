@@ -1,5 +1,10 @@
 .container-md
-	nav.navbar.navbar-expand-md.navbar-light.px-0.d-flex.justify-content-end
+	nav.navbar.navbar-expand-md.navbar-light.px-0.d-flex
+		.navbar-brand.d-md-none 
+			a.mr-4(href="https://api.whatsapp.com/send?phone=+79917777895&text=Здравствуйте! Пишу вам с сайта skupka-metalloloma.com" target="_blank")
+				img.w-50(src="images/whatsapp.svg" alt="WhatsApp" title="Напишите нам в WhatsApp")
+			a(href="viber://chat?number=%2B79917777895")
+				img.w-50(src="images/viber.svg" alt="Viber" title="Напишите нам в Viber")
 		button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
 			span.navbar-toggler-icon
 		.collapse.navbar-collapse#navbarNav
