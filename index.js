@@ -135,6 +135,7 @@ app.post('/mail', (req, res) => {
 			<h3>Новая заявка с сайта</h3>
 			<p><b>Имя:</b> ${req.body["Имя"]}</p>
 			<p><b>Телефон:</b> ${req.body["Телефон"]}</p>
+			<p><b>Текст:</b>${req.body["Текст"]}</p>
 			`,
 		};
 		const message_duplicate = {
@@ -145,6 +146,7 @@ app.post('/mail', (req, res) => {
 			<h3>На сайте skupka-metalloloma оставили новую заявку</h3>
 			<p><b>Имя:</b> ${req.body["Имя"]}</p>
 			<p><b>Телефон:</b> ${req.body["Телефон"]}</p>
+			<p><b>Текст:</b>${req.body["Текст"]}</p>
 			`,
 		}
 		mailer(message);

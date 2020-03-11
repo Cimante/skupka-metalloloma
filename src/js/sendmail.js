@@ -1,5 +1,3 @@
-// Очистить инпуты после успешной отправки письма
-
 $(document).ready(() => {
 	$('#first-screen--submit').on('click', () => {
 		$('form').submit((e) => {
@@ -7,9 +5,9 @@ $(document).ready(() => {
 	
 			const info = {
 				"Имя": $('input.form-control#first-screen--name').val(),
-				"Телефон": $('input.form-control#first-screen--phone').val()
+				"Телефон": $('input.form-control#first-screen--phone').val(),
+				"Текст": $('input.form-control#first-screen--text').val()
 			};
-			console.log(info)
 	
 			$.ajax({
 				type: "POST",
@@ -20,6 +18,7 @@ $(document).ready(() => {
 					alert("Успешно")
 					$('input.form-control#first-screen--name').val("")
 					$('input.form-control#first-screen--phone').val("")
+					$('input.form-control#first-screen--text').val("")
 				},
 				error: function() {
 					alert('Произошла ошибка при отправке')
