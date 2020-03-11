@@ -21,28 +21,89 @@ section.upper-advantages
 								li.d-inline-flex.align-items-center
 									img(src="images/upper-4.svg" alt="")
 									span Демонтаж
-section
-	.container-fluid
-		.row
-			.col-12.px-0.first-screen
-				picture
-					source.w-100(type="image/webp" srcset="images/bg.webp")
-					source.w-100(type="image/jpeg" srcset="images/bg.jpg")
-					img.w-100(src="images/bg.jpg" alt="" title="")
-				.container
-					.row
-						.col-12.col-lg-7.px-0.d-flex.flex-column.align-items-center.d-sm-block
-							h1 Прием черного и&nbsp;цветного металлолома в&nbsp;Москве и&nbsp;Московской области
-							button.first-screen--cta(type="button") Отправить заявку на вывоз
-						.offset-lg-1.col-4.px-0.d-none.d-lg-block
-							.feedback
-								h2.text-center Обратный звонок
-								form(action="#").d-flex.flex-column.justify-content-center
-									.form-group
-										input.form-control#first-screen--name(type="text" placeholder="Имя" required)
-										input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
-									button#first-screen--submit(type="submit") Отправить
+//-
+	section
+		.container-fluid
+			.row
+				.col-12.px-0.first-screen
+					picture
+						source.w-100(type="image/webp" srcset="images/bg.webp")
+						source.w-100(type="image/jpeg" srcset="images/bg.jpg")
+						img.w-100(src="images/bg.jpg" alt="" title="")
+					.container
+						.row
+							.col-12.col-lg-7.px-0.d-flex.flex-column.align-items-center.d-sm-block
+								h1 Прием черного и&nbsp;цветного металлолома в&nbsp;Москве и&nbsp;Московской области
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							.col-5.px-0.d-none.d-lg-block
+								.feedback
+									h2.text-center Заказать обратный звонок
+									form(action="#").d-flex.flex-column.justify-content-center
+										.form-group
+											input.form-control#first-screen--name(type="text" placeholder="Имя" required)
+											input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
+										button#first-screen--submit(type="submit") Отправить
 
+section
+	.container-fluid 
+		.row 
+			.col-12.px-0.first-screen
+				.carousel.slide(data-ride="carousel" data-interval="6000")
+					.carousel-inner 
+						.carousel-item.active
+							.description
+								h1 Прием черного и&nbsp;цветного металлолома в&nbsp;Москве и&nbsp;Московской&nbsp;области
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							picture
+								source.w-100(type="image/webp" srcset="images/bg.webp")
+								source.w-100(type="image/jpeg" srcset="images/bg.jpg")
+								img.w-100(src="images/bg.jpg" alt="" title="")
+							
+						.carousel-item
+							.description
+								h1 Прием&nbsp;алюминия по&nbsp;выгодной цене. Бесплатно&nbsp;вывезем и&nbsp;взвесим
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							picture
+								source.w-100.img-fluid(type="image/webp" srcset="images/alluminium.webp")
+								source.w-100.img-fluid(type="image/jpeg" srcset="images/alluminium.jpg")
+								img.w-100.img-fluid(src="images/alluminium.jpg" alt="" title="")
+
+						.carousel-item
+							.description
+								h1 Скупка&nbsp;латуни по&nbsp;высокой&nbsp;цене
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							picture
+								source.w-100.img-fluid(type="image/webp" srcset="images/latun.webp")
+								source.w-100.img-fluid(type="image/jpeg" srcset="images/latun.jpg")
+								img.w-100.img-fluid(src="images/latun.jpg" alt="" title="")
+
+						.carousel-item
+							.description
+								h1 Скупка&nbsp;кабеля. Деньги&nbsp;всегда&nbsp;есть
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							picture
+								source.w-100.img-fluid(type="image/webp" srcset="images/cable.webp")
+								source.w-100.img-fluid(type="image/jpeg" srcset="images/cable.jpg")
+								img.w-100.img-fluid(src="images/cable.jpg" alt="" title="")
+
+						.carousel-item
+							.description
+								h1 Скупка&nbsp;б/у аккумуляторов по&nbsp;высокой&nbsp;цене
+								button.first-screen--cta(type="button") Отправить заявку на вывоз
+							picture
+								source.w-100.img-fluid(type="image/webp" srcset="images/batteries.webp")
+								source.w-100.img-fluid(type="image/jpeg" srcset="images/batteries.jpg")
+								img.w-100.img-fluid(src="images/batteries.jpg" alt="" title="")
+
+				.feedback-absolute
+					h2.text-center Заказать обратный&nbsp;звонок
+					form(action="#").d-flex.flex-column.justify-content-center
+						.form-group
+							input.form-control#first-screen--name(type="text" placeholder="Имя" required)
+							input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
+							textarea.form-control#first-screen--text(rows="4" placeholder="Ваше сообщение...")
+						button#first-screen--submit(type="submit") Отправить
+							
 section
 	.container.about-us
 		.row
@@ -179,15 +240,15 @@ section
 					p Прием металлолома происходит в&nbsp;пунктах приёма Москвы&nbsp;и&nbsp;Московской области. Наш адрес:&nbsp;Московская обл. пос.&nbsp;Новоивановское, Можайское шоссе, вл.&nbsp;166
 
 section
-	.container-xl.rate-scrap
+	.container-xl-fluid.rate-scrap
 		.row 
-			.col-12 
+			.col-12.px-0 
 				h2.text-center Оценим лом за&nbsp;5&nbsp;минут
 		.row 
 			.col-md-10.offset-md-1.col-12
 				p.text-center Отправьте нам фотографию вашего лома&nbsp;и&nbsp;мы&nbsp;оценим примерный вес&nbsp;и&nbsp;стоимость&nbsp;и&nbsp;ответим вам&nbsp;в&nbsp;течение&nbsp;5&nbsp;минут
 		.row
-			.col-12
+			.col-12.px-0 
 				.d-flex.flex-column.align-items-center
 					form#feedback-with-images(action="/mail" method="POST" enctype="multipart/form-data")
 						.form-group.d-flex.flex-column

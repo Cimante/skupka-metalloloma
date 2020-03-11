@@ -1,23 +1,47 @@
 //- Используется во всех страницах, кроме главной
 mixin first-screen(header)
+	//-
+		section
+			.container-fluid
+				.row
+					.col-12.px-0.first-screen.not-main
+						picture
+							source.w-100(type="image/webp" srcset="images/bg.webp")
+							source.w-100(type="image/jpeg" srcset="images/bg.jpg")
+							img.w-100(src="images/bg.jpg" alt="" title="")
+						.container
+							.row
+								//- .align-items-md-start.align-items-center.justify-content-center
+								.col-12.col-lg-6.px-0.d-flex.align-items-center.justify-content-md-start.justify-content-center
+									h1= header
+								.offset-lg-2.col-4.px-0.d-none.d-lg-block
+									.feedback
+										h2.text-center Обратный звонок
+										form(action="#").d-flex.flex-column.justify-content-center
+											.form-group
+												input.form-control#first-screen--name(type="text" placeholder="Имя" required)
+												input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
+											button#first-screen--submit(type="submit") Отправить
+
 	section
-		.container-fluid
-			.row
-				.col-12.px-0.first-screen.not-main
-					picture
-						source.w-100(type="image/webp" srcset="images/bg.webp")
-						source.w-100(type="image/jpeg" srcset="images/bg.jpg")
-						img.w-100(src="images/bg.jpg" alt="" title="")
-					.container
-						.row
-							//- .align-items-md-start.align-items-center.justify-content-center
-							.col-12.col-lg-6.px-0.d-flex.align-items-center.justify-content-md-start.justify-content-center
-								h1= header
-							.offset-lg-2.col-4.px-0.d-none.d-lg-block
-								.feedback
-									h2.text-center Обратный звонок
-									form(action="#").d-flex.flex-column.justify-content-center
-										.form-group
-											input.form-control#first-screen--name(type="text" placeholder="Имя" required)
-											input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
-										button#first-screen--submit(type="submit") Отправить
+		.container-fluid 
+			.row 
+				.col-12.px-0.first-screen
+					.carousel.slide(data-ride="carousel" data-interval="0")
+						.carousel-inner 
+							.carousel-item.active
+								.description
+									h1= header
+								picture
+									source.w-100.img-fluid(type="image/webp" srcset="images/bg.webp")
+									source.w-100.img-fluid(type="image/jpeg" srcset="images/bg.jpg")
+									img.w-100.img-fluid(src="images/bg.jpg" alt="" title="")
+
+					.feedback-absolute
+						h2.text-center Заказать обратный&nbsp;звонок
+						form(action="#").d-flex.flex-column.justify-content-center
+							.form-group
+								input.form-control#first-screen--name(type="text" placeholder="Имя" required)
+								input.form-control#first-screen--phone.inputmask(type="phone" placeholder="Телефон" required)
+								textarea.form-control#first-screen--text(rows="4" placeholder="Ваше сообщение...")
+							button#first-screen--submit(type="submit") Отправить
