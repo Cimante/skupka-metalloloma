@@ -38,11 +38,17 @@ section.pages
                 
                 p Для того чтобы уточнить детали, задать вопросы или оценить имеющийся у&nbsp;Вас металлолом, свяжитесь с&nbsp;нашими специалистами любым удобным способом: по&nbsp;телефону, электронной почте, через формы на&nbsp;сайте или через мессенджеры. Для экспресс-оценки нужно будет прикрепить фотографии, которые помогут специалисту максимально точно назвать цену.
                 p Будем рады сотрудничеству!
+
         .row 
             .col-12 
-                .d-flex.justify-content-center 
-                    a.button(href="/price") 
-                        span Посмотреть прайс-лист 
+                section.price-list--table
+                    include ../tables/table7.pug
+            //-
+                .row 
+                    .col-12 
+                        .d-flex.justify-content-center 
+                            a.button(href="/price") 
+                                span Посмотреть прайс-лист 
 
 include ../components/cta 
 include ../components/footer 

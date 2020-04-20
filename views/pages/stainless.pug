@@ -43,11 +43,17 @@ section.pages
                 
                 p Для уточнения деталей или проведения оценки имеющегося у&nbsp;Вас лома металлов, свяжитесь с&nbsp;нашими специалистами любым удобным способом: через формы на&nbsp;сайте, по&nbsp;телефону, электронной почте или через мессенджеры. Для экспресс-оценки нужно будет прикрепить фотографии, они помогут для максимально точного определения стоимости металлолома.
                 p Работать с&nbsp;нами выгодно и&nbsp;удобно!
+
         .row 
             .col-12 
-                .d-flex.justify-content-center 
-                    a.button(href="/price") 
-                        span Посмотреть прайс-лист 
+                section.price-list--table
+                    include ../tables/table5.pug
+        //-
+            .row 
+                .col-12 
+                    .d-flex.justify-content-center 
+                        a.button(href="/price") 
+                            span Посмотреть прайс-лист 
 
 include ../components/cta 
 include ../components/footer 

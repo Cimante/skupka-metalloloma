@@ -42,11 +42,17 @@ section.pages
 
                 p Если Вы&nbsp;хотите сдать лом свинца или прочих цветных и&nbsp;черных металлов, то&nbsp;сделайте это максимально удобно и&nbsp;быстро, свяжитесь с&nbsp;нами любым способом: по&nbsp;телефону, через электронную почту, формы на&nbsp;сайте или мессенджеры, и&nbsp;мы&nbsp;быстро оценим и&nbsp;вывезем весь имеющийся металлолом.
                 p Сотрудничество с&nbsp;нами&nbsp;&mdash; это выгодно!
+
         .row 
             .col-12 
-                .d-flex.justify-content-center 
-                    a.button(href="/price") 
-                        span Посмотреть прайс-лист 
+                section.price-list--table
+                    include ../tables/table4.pug
+        //-
+            .row 
+                .col-12 
+                    .d-flex.justify-content-center 
+                        a.button(href="/price") 
+                            span Посмотреть прайс-лист 
 
 include ../components/cta 
 include ../components/footer 

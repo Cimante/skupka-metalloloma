@@ -45,9 +45,14 @@ section.pages
                 p Будем рады сотрудничеству!
         .row 
             .col-12 
-                .d-flex.justify-content-center 
-                    a.button(href="/price") 
-                        span Посмотреть прайс-лист 
+                section.price-list--table
+                    include ../tables/table2.pug
+        //-
+            .row 
+                .col-12 
+                    .d-flex.justify-content-center 
+                        a.button(href="/price") 
+                            span Посмотреть прайс-лист 
 
 include ../components/cta 
 include ../components/footer 
