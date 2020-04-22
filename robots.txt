@@ -5,5 +5,4 @@ Sitemap: https://skupka-metalloloma.com/sitemap.xml
 
 User-agent: Yandex
 Disallow: 
-Host: https://skupka-metalloloma.com/
 Sitemap: https://skupka-metalloloma.com/sitemap.xml
