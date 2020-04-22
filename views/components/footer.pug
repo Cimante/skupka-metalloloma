@@ -10,26 +10,32 @@
 									.d-inline-flex.d-md-flex.flex-md-column.align-items-center.align-items-md-start
 										img(src="images/logo-white.svg" alt="" title="")
 								.row.mt-3
-									.d-inline-flex.d-md-flex.flex-md-column.align-items-center.align-items-md-start
-										a(href='https://metrika.yandex.ru/stat/?id=57610831&from=informer', target='_blank', rel='nofollow')
-											img.ym-advanced-informer(src='https://informer.yandex.ru/informer/57610831/3_0_FFFFFFFF_F4F4F4FF_0_pageviews', style='width:88px; height:31px; border:0;', alt='Яндекс.Метрика', title='Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)', data-cid='57610831', data-lang='ru')
+									.d-flex.flex-row
+										// Yandex.Metrika informer
+										a(href='https://metrika.yandex.ru/stat/?id=62170480&from=informer', target='_blank', rel='nofollow')
+											img.ym-advanced-informer(src='https://informer.yandex.ru/informer/62170480/3_0_FFFFFFFF_EFEFEFFF_0_pageviews', style='width:88px; height:31px; border:0;', alt='Яндекс.Метрика', title='Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)', data-cid='62170480', data-lang='ru')
+										// /Yandex.Metrika informer
+
 										// Yandex.Metrika counter
 										script(type='text/javascript').
 											(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 											m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
 											(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-											ym(57610831, "init", {
+											ym(62170480, "init", {
 											clickmap:true,
 											trackLinks:true,
 											accurateTrackBounce:true,
-											webvisor:true
+											webvisor:true,
+											trackHash:true
 											});
 										noscript
-									div
-										img(src='https://mc.yandex.ru/watch/57610831', style='position:absolute; left:-9999px;', alt='')
+											div
+												img(src='https://mc.yandex.ru/watch/62170480', style='position:absolute; left:-9999px;', alt='')
 										// /Yandex.Metrika counter
+
 										a.ml-3(href='https://webmaster.yandex.ru/siteinfo/?site=skupka-metalloloma.com')
 											img(width='88', height='31', alt='', border='0', src='https://yandex.ru/cycounter?skupka-metalloloma.com&theme=light&lang=ru')
+
 							.col-12.col-md-4.mt-5.mt-md-0
 								h3 Информация
 								nav
